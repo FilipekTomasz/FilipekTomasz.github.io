@@ -23,3 +23,11 @@ section{
     box-sizing: border-box;
     min-height: fit-content;
 }
+
+@media screen and (max-width: 1200px) {
+    section{
+        height: fit-content;
+        margin: 0 5%;
+        padding:0;
+    }
+}

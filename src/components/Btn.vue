@@ -17,10 +17,10 @@ defineProps<{
     cursor: pointer; 
     background: rgb(53, 53, 53);
     color: white;
-}
-button:hover{
-  background: rgb(20,20,20);
-  border: rgb(255, 255, 255) 0.1rem solid;
-}
+  }
+  button:hover{
+    background: rgb(20,20,20);
+    border: rgb(255, 255, 255) 0.1rem solid;
+  }
 
 </style>

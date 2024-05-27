@@ -52,9 +52,11 @@
 
 .image{
     display:flex;
-    height: 300px;
-    width: 300px;
     margin: auto 0;
+}
+.image img{
+    height: 300px;
+    width: 350px;
 }
 .info{
     align-self: center;
@@ -81,5 +83,33 @@
   cursor: pointer;
   height: 2rem;
 }
+@media screen and (max-width: 1400px) {
+  #home {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #home {
+    display: block;
+  }
+  .text{
+    width:fit-content
+  }
+  .image img {
+    width: 300px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
 
+}
+@media screen and (max-width: 600px) {
+    #home {
+      height: 83vh;
+      margin-bottom: 0;
+    }
+    .container{
+        padding: 2rem;
+    }
+}
 </style>

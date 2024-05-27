@@ -124,7 +124,7 @@ function openSite(link:string){
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
 }
-.project-img {
+.project-img img{
   border-radius: 2rem;
   width: 400px;
   height: 400px;
@@ -137,7 +137,6 @@ function openSite(link:string){
 .project-text {
   text-align: center;
   margin: 0;
-  width: 400px;
 }
 .project-text-container {
     flex-grow: 1;
@@ -153,15 +152,20 @@ function openSite(link:string){
   }
 
   .projects-container {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+  }
+  #projects{
+    height: fit-content;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .text_2 {
-    font-size: 2rem;
+@media screen and (max-width: 1200px) {
+  .projects-container{
+    margin-top: 2rem;
   }
-}
+  .project-img img{
+    width: 275px;
+  }
 
+
+}
 </style>

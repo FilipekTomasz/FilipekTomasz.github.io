@@ -15,8 +15,9 @@ function toggleHamburger(){
         <ul class ="tabs">
             <li><NavLink text="Home" link="#home" /></li>
             <li><NavLink text="Projects" link="#projects" /></li>
-            <li><NavLink text="Skills" link="#skills" /></li>
             <li><NavLink text="Contact" link="#contact" /></li>
+            <li><img src="../assets/english.png" class="icon"/></li>
+            <li><img src="../assets/polish.png" class="icon"/></li>
         </ul>
     </nav>
     <nav class="mobileNav">
@@ -42,10 +43,10 @@ function toggleHamburger(){
     align-items: center;
     display: flex;
     justify-content: space-evenly;
-    position: fixed;
     top: 0;
     width: 100vw;
     z-index: 99;
+    margin-top: 5px;
 }
 .mobileNav{
     display:none;
@@ -163,7 +164,11 @@ function toggleHamburger(){
 .hamburger-icon span:first-child {
   transform: none;
 }
-
+.icon {
+  cursor: pointer;
+  height: 2rem;
+  padding: 0 10px;
+}
 
 @media screen and (max-width:1200px){
     .desktopNav{
@@ -173,5 +178,15 @@ function toggleHamburger(){
         display:flex;
     }
 }
-
+@media screen and (max-width:600px){
+  .tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        font-size: 1rem;
+  }
+  li{
+    font-size: 1rem;
+  }
+}
 </style>

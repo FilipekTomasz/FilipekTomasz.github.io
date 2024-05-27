@@ -5,22 +5,24 @@
 <section id="contact">
       <p class="text_1">Get in Touch</p>
       <h1 class="text_2">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
+      <div class="contact-info-container">
+        <div class="contact-info-box">
           <img
             src="../assets/email.png"
             alt="Email icon"
             class="icon contact-icon email-icon"
+            href="mailto:filipektomasz03@gmail.com"
           />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+          <a href="mailto:filipektomasz03@gmail.com">filipektomasz03@gmail.com</a>
         </div>
-        <div class="contact-info-container">
+        <div class="contact-info-box">
           <img
             src="../assets/linkedin.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
+            href="https://www.linkedin.com/in/tomasz-filipek-143360221/"
           />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          <a href="https://www.linkedin.com/in/tomasz-filipek-143360221/">LinkedIn</a>
         </div>
       </div>
     </section>
@@ -30,9 +32,11 @@
 #contact {
   display: flex;
   flex-direction: column;
+  height: 30vw;
+  margin-top: 8vw;
 }
 
-.contact-info-upper-container {
+.contact-info-container {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
@@ -43,12 +47,13 @@
   padding: 0.5rem;
 }
 
-.contact-info-container {
+.contact-info-box {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   margin: 1rem;
+  text-align: center;
 
 }
 
@@ -82,8 +87,30 @@ a {
   color: black;
   text-decoration: none;
   text-decoration-color: white;
+  align-self: center;
   transition: all 300ms ease;
 
 }
+@media screen and (max-width: 1400px) {
+  #contact {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-info-container {
+    flex-direction: column;
+  }
+  .contact-info-box{
+    align-items: baseline;
+    justify-content:start;
+    text-align: left;
+  }
+
+}
+
+
+
+
 
 </style>
