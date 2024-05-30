@@ -3,8 +3,8 @@
 </script>
 <template>
 <section id="contact">
-      <p class="text_1">Get in Touch</p>
-      <h1 class="text_2">Contact Me</h1>
+      <p class="text_1">{{$t('touch')}}</p>
+      <h1 class="text_2">{{$t('contactMe')}}</h1>
       <div class="contact-info-container">
         <div class="contact-info-box">
           <img
@@ -32,7 +32,7 @@
 #contact {
   display: flex;
   flex-direction: column;
-  height: 30vw;
+  height: 20vw;
   margin-top: 8vw;
 }
 

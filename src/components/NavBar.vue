@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import NavLink from './NavLink.vue';
+import { i18n } from '@/main';
 
 function toggleHamburger(){
     const menu = document.querySelector(".menu-links");
@@ -7,34 +8,49 @@ function toggleHamburger(){
     menu?.classList.toggle("open");
     icon?.classList.toggle("open");
 }
+function changeLanguage(lang:string){
+  if(lang == "polish"){
+    document.querySelectorAll(".englishIcon").forEach(e => e.classList.add('grayed'));
+    document.querySelectorAll(".polishIcon").forEach(e => e.classList.remove('grayed'));
+    i18n.global.locale.value = 'pl';
+  } else{
+    document.querySelectorAll(".englishIcon").forEach(e => e.classList.remove('grayed'));
+    document.querySelectorAll(".polishIcon").forEach(e => e.classList.add('grayed'));
+    i18n.global.locale.value = 'en';
+  }
+   
+}
 </script>
 
 <template>
     <nav class="desktopNav">
         <div class ="logo">Tomasz Filipek</div>
         <ul class ="tabs">
-            <li><NavLink text="Home" link="#home" /></li>
-            <li><NavLink text="Projects" link="#projects" /></li>
-            <li><NavLink text="Contact" link="#contact" /></li>
-            <li><img src="../assets/english.png" class="icon"/></li>
-            <li><img src="../assets/polish.png" class="icon"/></li>
+            <li><NavLink :text="$t('home')" link="#home" /></li>
+            <li><NavLink :text="$t('projects')" link="#projects" /></li>
+            <li><NavLink :text="$t('contact')" link="#contact" /></li>
+            <li><img src="../assets/english.png"  class="icon englishIcon" @click="changeLanguage('english')"/></li>
+            <li><img src="../assets/polish.png"  class="icon grayed polishIcon" @click="changeLanguage('polish')"/></li>
         </ul>
     </nav>
     <nav class="mobileNav">
         <div class ="logo">Tomasz Filipek</div>
-        <div class ="hamburger-menu">
+        <div class="icons-container">
+          <div><img src="../assets/english.png" class="icon englishIcon" @click="changeLanguage('english')"/></div>
+          <div><img src="../assets/polish.png" class="icon grayed polishIcon" @click="changeLanguage('polish')"/></div>  
+          <div class ="hamburger-menu">
             <div class ="hamburger-icon" @click="toggleHamburger()">
-                <span></span>
-                <span></span>
-                <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
             </div>
-            <div class="menu-links">
-                <li><NavLink text="Home" link="#home" @click="toggleHamburger()"/></li>
-                <li><NavLink text="Projects" link="#projects" @click="toggleHamburger()" /></li>
-                <li><NavLink text="Skills" link="#skills" @click="toggleHamburger()" /></li>
-                <li><NavLink text="Contact" link="#contact" @click="toggleHamburger()" /></li>
-            </div>
-        </div>
+              <div class="menu-links">
+                  <li><NavLink :text="$t('home')" link="#home" @click="toggleHamburger()"/></li>
+                  <li><NavLink :text="$t('projects')" link="#projects" @click="toggleHamburger()" /></li>
+                  <li><NavLink :text="$t('contact')" link="#contact" @click="toggleHamburger()" /></li>
+              </div>
+          </div>
+      </div>
     </nav>
 </template>
 
@@ -167,8 +183,22 @@ function toggleHamburger(){
 .icon {
   cursor: pointer;
   height: 2rem;
-  padding: 0 10px;
+  padding-right: 10px;
+  transition: all 0.2s ease-in-out;
 }
+.grayed{
+    transition: all 0.2s ease-in-out;
+    opacity: 0.4;
+    filter: alpha(opacity=40); 
+}
+
+.icons-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media screen and (max-width:1200px){
     .desktopNav{

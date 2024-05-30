@@ -10,15 +10,13 @@
 <template>
     <section class="container" id="home">
         <div class ="info">
-            <h1 class = "h1-text">Welcome!</h1>
+            <h1 class = "h1-text">{{ $t('welcome') }}</h1>
             <p class = "text">
-                My name is Tomasz Filipek and I'm a software engineer. 
-                My passion is building web applications and designing websites using modern frameworks. 
-                Also I love trying out new technologies.
+                {{ $t('homeText') }}
             </p>
             <div class="btn-container">
-                <Btn text="Open resume" @click = "openCV()"/>
-                <Btn text="Contact" href="#contact"/>
+                <Btn :text="$t('resume')" @click = "openCV()"/>
+                <Btn :text="$t('contact')" href="#contact"/>
             </div>
             <div class="socials-container">
                 <img

@@ -4,9 +4,9 @@
 <template>
     <nav class="desktopNav">
         <ul class ="tabs">
-            <li><NavLink text="Home" link="#home" /></li>
-            <li><NavLink text="Projects" link="#projects" /></li>
-            <li><NavLink text="Contact" link="#contact" /></li>
+            <li><NavLink :text="$t('home')" link="#home" /></li>
+            <li><NavLink :text="$t('projects')" link="#projects" /></li>
+            <li><NavLink :text="$t('contact')" link="#contact" /></li>
         </ul>
     </nav>
     <!--<p>Copyright &#169; 2024 Tomasz Filipek. All Rights Reserved.</p>-->

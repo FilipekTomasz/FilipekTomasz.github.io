@@ -1,10 +1,13 @@
 <script setup lang="ts">
 defineProps<{
-  text: string
+  text: string,
+  href?: string
 }>()
 </script>
 <template>
-    <button>{{ text }}</button>
+    <a :href="href">
+      <button>{{ text }}</button>
+    </a>
 </template>
 <style scoped>
   button{

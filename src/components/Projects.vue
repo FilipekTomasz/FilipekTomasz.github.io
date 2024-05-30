@@ -6,70 +6,66 @@ function openSite(link:string){
 </script>
 <template>
     <section id="projects">
-        <p class="text_1">Browse my</p>
-        <h2 class="text_2">Projects</h2>
+        <p class="text_1">{{ $t('browse') }}</p>
+        <h2 class="text_2">{{ $t('projects') }}</h2>
         <div class="projects-container">
           <div class="project-container color-container">
             <div class="img-container">
               <img
-                src="../assets/wsp.png"
+                src="../assets/wsp1.png"
                 alt="wsp"
                 class="project-img"
               />
             </div>
             <div class="project-text-container">
               <h2 class="project-title">WSP</h2>
-              <p class="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p class="project-text">{{ $t('projectsText1') }}</p>
             </div>
             <div class="btn-container">
                 <Btn text="Github" @click="openSite('https://github.com/FilipekTomasz/wsp-backend')"/>
-                <Btn text="Live" @click="openSite('https://wsp.zs6sobieski.edu.pl/')"/> 
+                <Btn :text="$t('live')" @click="openSite('https://wsp.zs6sobieski.edu.pl/')"/> 
             </div>
           </div>
 
           <div class="project-container color-container">
             <div class="img-container">
               <img
-                src="../assets/wsp.png"
+                src="../assets/wyprowadz1.png"
                 alt="wsp"
                 class="project-img"
               />
             </div>
             <div class="project-text-container">
-              <h2 class="project-title">Project Two</h2>
-              <p class="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <h2 class="project-title">Wyprowadz mnie</h2>
+              <p class="project-text">{{ $t('projectsText2') }}</p>
             </div>
             <div class="btn-container">
-                <Btn text="Github"/>
-                <Btn text="Live"/>
+                <Btn text="Github" @click="openSite('https://github.com/FilipekTomasz/wyprowadzmnie')"/>
+                <Btn :text="$t('live')"/>
             </div>
           </div>
 
           <div class="project-container color-container">
             <div class="img-container">
               <img
-                src="../assets/wsp.png"
+                src="../assets/olympus3.png"
                 alt="wsp"
                 class="project-img"
               />
             </div>
             <div class="project-text-container">
-              <h2 class="project-title">Project Three</h2>
-              <p class="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <h2 class="project-title">Olympus</h2>
+              <p class="project-text">{{ $t('projectsText3') }}</p>
             </div>
             <div class="btn-container">
-                <Btn text="Github"/>
-                <Btn text="Live"/>
+                <Btn text="Github" @click="openSite('https://github.com/EverestAPI/Olympus/pull/89')"/>
+                <Btn :text="$t('live')" @click="openSite('https://everestapi.github.io/')"/>
             </div>
           </div>
 
         </div>
         <div class="btn-more-container">
-            <Btn text="Show more"  @click="openSite('https://github.com/FilipekTomasz?tab=repositories')"/>
+            <Btn :text="$t('showMore')"  @click="openSite('https://github.com/FilipekTomasz?tab=repositories')"/>
         </div>
 
     </section>
@@ -124,10 +120,10 @@ function openSite(link:string){
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
 }
-.project-img img{
-  border-radius: 2rem;
-  width: 400px;
-  height: 400px;
+.img-container img{
+  border-radius: 1rem;
+  max-width: 400px;
+  max-height: 220px;
   border: black 0.1rem solid;
 }
 .project-title {
@@ -161,9 +157,13 @@ function openSite(link:string){
 @media screen and (max-width: 1200px) {
   .projects-container{
     margin-top: 2rem;
+    padding:0.5rem;
   }
-  .project-img img{
+  .img-container img{
     width: 275px;
+  }
+  #projects{
+    margin-top:100px;
   }
 
 

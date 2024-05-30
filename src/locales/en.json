@@ -1,0 +1,17 @@
+{
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact",
+    "welcome": "Welcome!",
+    "homeText": "My name is Tomasz Filipek and I'm a software engineer. My passion is building web applications and designing websites using modern frameworks. Also I love trying out new technologies.",
+    "resume": "Open resume",
+    "browse": "Browse my",
+    "projectsText1": "WSP - 'Wybierz swoją przyszłość' is an application designed to assist middle school graduates in selecting their high school. Users take a short personality test that guides them towards suitable career paths, after which they are shown schools offering relevant programs. The site is currently used by the city of Jastrzębie-Zdrój. Developed in a small team, my role focused on the backend development. Technologies used include Node.js, Express, TypeScript, and MongoDB.",
+    "projectsText2": "'Wyprowadź mnie' is an app designed to connect pet owners with caregivers who can look after their animals when they are unavailable. Users can create requests for pet care or respond to requests to walk or take care of animals. Developed in a small team, my role focused on backend development. Technologies used include Node.js, MySQL, JWT, WebSockets, and Nodemailer.",
+    "projectsText3": "'Olympus' is an open-source mod manager for the game Celeste. My contributions included creating a mod presets submenu, which involved modifying files, designing new UI elements, and working with the existing codebase and architecture. Technologies used include Lua, C#, and LÖVE.",
+    "live": "Live",
+    "showMore": "Show more",
+    "touch": "Get in touch",
+    "contactMe": "Contact me"
+
+}

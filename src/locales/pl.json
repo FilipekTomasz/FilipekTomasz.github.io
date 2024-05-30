@@ -1,0 +1,16 @@
+{
+  "home": "Strona główna",
+  "projects": "Projekty",
+  "contact": "Kontakt",
+  "welcome": "Witaj!",
+  "homeText": "Nazywam się Tomasz Filipek i jestem programistą fullstack, ze szczególnym zainteresowaniem backendem. Moją pasją jest tworzenie aplikacji internetowych i projektowanie stron z wykorzystaniem nowoczesnych frameworków. Uwielbiam również wypróbowywać nowe technologie..",
+  "resume": "Otwórz CV",
+  "browse": "Przeglądaj moje",
+  "projectsText1": "WSP - 'Wybierz swoją przyszłość' to aplikacja zaprojektowana, aby pomóc absolwentom szkół podstawowych w wyborze szkoły średniej. Użytkownicy wykonują krótki test osobowości, który pomaga im wybrać odpowiednią ścieżkę kariery, a następnie są prezentowane szkoły oferujące odpowiednie programy. Strona jest obecnie używana przez miasto Jastrzębie-Zdrój. Rozwijana w małym zespole, gdzie moją rolą była praca nad backendem. Technologie użyte to Node.js, Express, TypeScript i MongoDB.",
+  "projectsText2": "'Wyprowadź mnie' to aplikacja zaprojektowana, aby połączyć właścicieli zwierząt z opiekunami, którzy mogą zająć się ich zwierzętami, gdy są niedostępni. Użytkownicy mogą tworzyć zlecenia na opiekę nad zwierzętami lub odpowiadać na zlecenia dotyczące wyprowadzania na spacer lub opieki nad zwierzętami. Rozwijana w małym zespole, gdzie moją rolą była praca nad backendem. Technologie użyte to Node.js, MySQL, JWT, WebSockets i Nodemailer.",
+  "projectsText3": "'Olympus' to open-source'owy menedżer modów dla gry Celeste. Moje wkłady obejmowały stworzenie submenu ustawień modów, co wiązało się z modyfikacją plików, projektowaniem nowych elementów UI oraz pracą z istniejącym kodem i architekturą. Technologie użyte to Lua, C# i LÖVE.",
+  "live": "Na żywo",
+  "showMore": "Pokaż więcej",
+  "touch": "Skontaktuj się",
+  "contactMe": "Skontaktuj się ze mną"
+}
